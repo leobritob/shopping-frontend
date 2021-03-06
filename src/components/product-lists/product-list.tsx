@@ -1,21 +1,21 @@
 import React from 'react'
 
+import { Row, Button } from 'components'
 import { ProductListItem, ProductListItemProps } from './product-list-item'
 
 type ProductsListProps = {
-  title: string
   products: ProductListItemProps[]
+  onRemoveProduct: (index: number) => void
 }
 
-export const ProductsList: React.FC<ProductsListProps> = ({
-  title,
-  products,
-}: ProductsListProps) => {
+export const ProductsList: React.FC<ProductsListProps> = ({ products, onRemoveProduct }: ProductsListProps) => {
   return (
     <ul>
-      {title && <h2>{title}</h2>}
       {products.map((product, index) => (
-        <ProductListItem key={index} {...product} />
+        <Row key={index} pb="10px">
+          <ProductListItem {...product} />
+          <Button onClick={() => onRemoveProduct(index)}>Remover</Button>
+        </Row>
       ))}
     </ul>
   )

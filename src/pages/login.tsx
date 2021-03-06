@@ -4,7 +4,7 @@ import { Column, Title } from 'components'
 
 export const LoginPage: React.FC = () => {
   return (
-    <Column width="500px" margin="0 auto" backgroundColor="#fff" p="20px" borderRadius="5px">
+    <Column bg="white">
       <Title>Painel de Autenticação</Title>
     </Column>
   )

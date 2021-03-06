@@ -14,13 +14,27 @@ import {
   ColorProps,
   border,
   BorderProps,
+  position,
+  PositionProps,
+  background,
+  BackgroundProps,
 } from 'styled-system'
 
-export type ColumProps = LayoutProps & FlexboxProps & MarginProps & PaddingProps & GridProps & ColorProps & BorderProps
+export type ColumProps = LayoutProps &
+  FlexboxProps &
+  MarginProps &
+  PaddingProps &
+  GridProps &
+  ColorProps &
+  BorderProps &
+  PositionProps &
+  BackgroundProps
 
 export const Column = styled.div<ColumProps>`
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   ${layout}
   ${flexbox}
   ${margin}
@@ -28,4 +42,6 @@ export const Column = styled.div<ColumProps>`
   ${grid}
   ${color}
   ${border}
+  ${position}
+  ${background}
 `

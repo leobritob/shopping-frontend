@@ -10,9 +10,13 @@ import {
   PaddingProps,
   GridProps,
   FlexboxProps,
+  color,
+  ColorProps,
+  border,
+  BorderProps,
 } from 'styled-system'
 
-export type ColumProps = LayoutProps & FlexboxProps & MarginProps & PaddingProps & GridProps
+export type ColumProps = LayoutProps & FlexboxProps & MarginProps & PaddingProps & GridProps & ColorProps & BorderProps
 
 export const Column = styled.div<ColumProps>`
   display: flex;
@@ -22,4 +26,6 @@ export const Column = styled.div<ColumProps>`
   ${margin}
   ${padding}
   ${grid}
+  ${color}
+  ${border}
 `

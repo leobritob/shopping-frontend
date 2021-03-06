@@ -1,9 +1,11 @@
 import React from 'react'
 
+import { Column, Title } from 'components'
+
 export const LoginPage: React.FC = () => {
   return (
-    <div>
-      <h1>Login Page</h1>
-    </div>
+    <Column>
+      <Title>Painel de Autenticação</Title>
+    </Column>
   )
 }

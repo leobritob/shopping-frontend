@@ -5,7 +5,7 @@ import { Row, Column } from 'components'
 export const LoginLayout: React.FC = ({ children }) => {
   return (
     <Row width="100%" height="100vh">
-      <Column width="400px" height="100vh" p="20px">
+      <Column width="500px" height="100vh" p="20px">
         {children}
       </Column>
       <Column

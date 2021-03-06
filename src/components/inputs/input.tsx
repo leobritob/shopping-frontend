@@ -22,7 +22,7 @@ import {
   SpaceProps,
 } from 'styled-system'
 
-export type ColumProps = LayoutProps &
+export type InputProps = LayoutProps &
   FlexboxProps &
   MarginProps &
   PaddingProps &
@@ -33,11 +33,11 @@ export type ColumProps = LayoutProps &
   BackgroundProps &
   SpaceProps
 
-export const Column = styled.div<ColumProps>`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+export const Input = styled.input<InputProps>`
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #eaeaea;
   ${layout}
   ${flexbox}
   ${margin}

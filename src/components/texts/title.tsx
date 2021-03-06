@@ -5,6 +5,7 @@ export const Title = styled.h1`
   text-transform: uppercase;
   font-size: 24px;
   position: relative;
+  margin: 20px 0;
 
   &::before {
     content: ' ';

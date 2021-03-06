@@ -8,12 +8,14 @@ import {
   ShadowProps,
   padding,
   PaddingProps,
+  space,
+  SpaceProps,
 } from 'styled-system'
 
-type ButtonProps = ColorProps & LayoutProps & ShadowProps & PaddingProps
+type ButtonProps = ColorProps & LayoutProps & ShadowProps & PaddingProps & SpaceProps
 
 export const Button = styled.button<ButtonProps>`
-  background-color: #900;
+  background-color: #069;
   border: none;
   color: #fff;
   cursor: pointer;
@@ -23,4 +25,5 @@ export const Button = styled.button<ButtonProps>`
   ${layout}
   ${shadow}
   ${padding}
+  ${space}
 `

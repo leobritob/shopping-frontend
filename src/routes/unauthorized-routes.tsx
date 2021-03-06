@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import { Route } from 'react-router-dom'
+import { Redirect, Route } from 'react-router-dom'
 
 import { LoginPage } from 'pages'
 
@@ -9,6 +9,8 @@ export const UnauthorizedRoutes: React.FC = () => {
       <Route path="/login" exact>
         <LoginPage />
       </Route>
+
+      <Redirect path="*" to="/login" />
     </Fragment>
   )
 }

@@ -6,7 +6,7 @@ import { CustomerRoutes } from './customer-routes'
 import { UnauthorizedRoutes } from './unauthorized-routes'
 
 export const Router: React.FC = () => {
-  const isConnected = true //get from storage
+  const isConnected = false //get from storage
 
   const AuthorizedRoutes = () => {
     const userRole: any = 'admin' //request to api

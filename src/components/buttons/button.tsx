@@ -21,6 +21,7 @@ export const Button = styled.button.attrs({ 'data-testid': 'button' })<ButtonPro
   cursor: pointer;
   padding: 10px 20px;
   font-size: 14px;
+  border-radius: ${({ theme }) => theme.radii.borderRadius}px;
   ${color}
   ${layout}
   ${shadow}

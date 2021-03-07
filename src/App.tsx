@@ -1,10 +1,10 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
 
 import { Router } from './routes'
-import { theme } from 'styles'
+import { theme, ThemeType } from 'styles'
 
-const GlobalStyles = createGlobalStyle`
+const GlobalStyles = createGlobalStyle<{ theme: ThemeType }>`
   * {
     margin: 0;
     padding: 0;
@@ -17,7 +17,7 @@ const GlobalStyles = createGlobalStyle`
 export const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
-      <GlobalStyles />
+      <GlobalStyles theme={theme} />
       <Router />
     </ThemeProvider>
   )

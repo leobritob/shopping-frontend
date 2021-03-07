@@ -39,6 +39,7 @@ export const Input = styled.input<InputProps>`
   background-color: #fff;
   border: 1px solid #eaeaea;
   font-size: 14px;
+  border-radius: ${({ theme }) => theme.radii.borderRadius}px;
   ${layout}
   ${flexbox}
   ${margin}

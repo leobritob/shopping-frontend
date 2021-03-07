@@ -38,6 +38,7 @@ export const Input = styled.input<InputProps>`
   padding: 10px;
   background-color: #fff;
   border: 1px solid #eaeaea;
+  font-size: 14px;
   ${layout}
   ${flexbox}
   ${margin}

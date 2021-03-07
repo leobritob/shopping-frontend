@@ -1,7 +1,8 @@
 import React, { Fragment } from 'react'
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle, ThemeProvider } from 'styled-components'
 
 import { Router } from './routes'
+import { theme } from 'styles'
 
 const GlobalStyles = createGlobalStyle`
   * {
@@ -15,9 +16,9 @@ const GlobalStyles = createGlobalStyle`
 
 export const App: React.FC = () => {
   return (
-    <Fragment>
+    <ThemeProvider theme={theme}>
       <GlobalStyles />
       <Router />
-    </Fragment>
+    </ThemeProvider>
   )
 }

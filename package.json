@@ -50,6 +50,7 @@
     "@types/color": "^3.0.1",
     "@types/pretty": "^2.0.0",
     "@types/react-router-dom": "^5.1.7",
+    "@types/react-test-renderer": "^17.0.1",
     "@types/styled-components": "^5.1.7",
     "@types/styled-system": "^5.1.10",
     "@typescript-eslint/eslint-plugin": "^4.14.1",
@@ -57,9 +58,11 @@
     "eslint": "^7.18.0",
     "eslint-plugin-react": "^7.22.0",
     "husky": "^4.3.8",
+    "jest-styled-components": "^7.0.3",
     "prettier": "^2.2.1",
     "pretty": "^2.0.0",
-    "pretty-quick": "^3.1.0"
+    "pretty-quick": "^3.1.0",
+    "react-test-renderer": "^17.0.1"
   },
   "husky": {
     "hooks": {

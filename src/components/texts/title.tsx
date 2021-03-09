@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
-export const Title = styled.h1`
-  color: #069;
+export const Title = styled.h1.attrs({ 'data-testid': 'title' })`
+  color: ${({ theme }) => theme.colors.primary};
   text-transform: uppercase;
   font-size: 24px;
   position: relative;

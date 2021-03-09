@@ -41,4 +41,14 @@ describe('<Text />', () => {
     expect(text).toHaveStyleRule('color', '#000')
     expect(text).toHaveStyleRule('font-size', '14px')
   })
+
+  it('should render snapshot of text correctly', () => {
+    act(() => {
+      render(<Text>Ok</Text>, container)
+    })
+
+    expect(pretty(container.innerHTML)).toMatchInlineSnapshot(
+      `"<p data-testid=\\"text\\" class=\\"sc-eCssSg gMGkCh\\">Ok</p>"`
+    )
+  })
 })

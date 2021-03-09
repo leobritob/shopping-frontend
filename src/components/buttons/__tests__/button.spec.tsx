@@ -23,27 +23,27 @@ describe('<Button />', () => {
 
   it('should render button correctly', () => {
     act(() => {
-      render(<Button theme={theme}>Conectar</Button>, container)
+      render(<Button theme={theme}>Ok</Button>, container)
     })
 
-    expect(container.querySelector('[data-testid="button"]')?.textContent).toBe('Conectar')
+    expect(container.querySelector('[data-testid="button"]')?.textContent).toBe('Ok')
   })
 
   it('should render a cancel button correctly', () => {
     act(() => {
-      render(<Button theme={theme}>Cancelar</Button>, container)
+      render(<Button theme={theme}>Cancel</Button>, container)
     })
 
-    expect(container.querySelector('[data-testid="button"]')?.textContent).toBe('Cancelar')
+    expect(container.querySelector('[data-testid="button"]')?.textContent).toBe('Cancel')
   })
 
-  it('should render the button snapshot correctly', () => {
+  it('should render a snapshot of button correctly', () => {
     act(() => {
-      render(<Button theme={theme}>Conectar</Button>, container)
+      render(<Button theme={theme}>Ok</Button>, container)
     })
 
     expect(pretty(container.innerHTML)).toMatchInlineSnapshot(
-      `"<button data-testid=\\"button\\" class=\\"sc-bdfBwQ lDFgM\\">Conectar</button>"`
+      `"<button data-testid=\\"button\\" class=\\"sc-bdfBwQ lDFgM\\">Ok</button>"`
     )
   })
 
@@ -54,13 +54,19 @@ describe('<Button />', () => {
     expect(button).toHaveStyleRule('border', 'none')
     expect(button).toHaveStyleRule('color', '#fff')
     expect(button).toHaveStyleRule('cursor', 'pointer')
-    expect(button).toHaveStyleRule('padding', '10px 20px')
     expect(button).toHaveStyleRule('font-size', '14px')
     expect(button).toHaveStyleRule('border-radius', `${theme.radii.borderRadius}px`)
   })
 
   it('should change padding', () => {
     const button = renderer.create(<Button theme={theme} padding="20px 40px" />).toJSON()
+    expect(button).not.toHaveStyleRule('padding', '10px 20px')
     expect(button).toHaveStyleRule('padding', '20px 40px')
+    expect(button).toHaveStyleRule('background-color', '#069')
+    expect(button).toHaveStyleRule('border', 'none')
+    expect(button).toHaveStyleRule('color', '#fff')
+    expect(button).toHaveStyleRule('cursor', 'pointer')
+    expect(button).toHaveStyleRule('font-size', '14px')
+    expect(button).toHaveStyleRule('border-radius', `${theme.radii.borderRadius}px`)
   })
 })

@@ -23,10 +23,10 @@ describe('<Title />', () => {
 
   it('should render correctly', () => {
     act(() => {
-      render(<Title theme={theme}>Olá, mundo!</Title>, container)
+      render(<Title theme={theme}>Hello, world!</Title>, container)
     })
 
-    expect(container.querySelector('[data-testid="title"]')?.textContent).toBe('Olá, mundo!')
+    expect(container.querySelector('[data-testid="title"]')?.textContent).toBe('Hello, world!')
   })
 
   it('should render a name correctly', () => {

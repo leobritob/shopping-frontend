@@ -33,7 +33,7 @@ export type ColumProps = LayoutProps &
   BackgroundProps &
   SpaceProps
 
-export const Column = styled.div<ColumProps>`
+export const Column = styled.div.attrs({ 'data-testid': 'column' })<ColumProps>`
   display: flex;
   flex-direction: column;
   align-items: center;

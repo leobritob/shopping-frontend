@@ -22,10 +22,10 @@ describe('<Text />', () => {
 
   it('should render correctly', () => {
     act(() => {
-      render(<Text>Olá, mundo!</Text>, container)
+      render(<Text>Hello, world!</Text>, container)
     })
 
-    expect(container.querySelector('[data-testid="text"]')?.textContent).toBe('Olá, mundo!')
+    expect(container.querySelector('[data-testid="text"]')?.textContent).toBe('Hello, world!')
   })
 
   it('should render a name correctly', () => {

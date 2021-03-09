@@ -33,7 +33,7 @@ export type InputProps = LayoutProps &
   BackgroundProps &
   SpaceProps
 
-export const Input = styled.input<InputProps>`
+export const Input = styled.input.attrs({ 'data-testid': 'input' })<InputProps>`
   width: 100%;
   padding: 10px;
   background-color: #fff;

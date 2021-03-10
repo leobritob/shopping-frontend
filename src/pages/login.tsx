@@ -1,11 +1,18 @@
 import React, { useCallback } from 'react'
 import { useForm } from 'react-hook-form'
+import { yupResolver } from '@hookform/resolvers/yup'
+import * as yup from 'yup'
 
-import { Button, Column, Input, Title } from 'components'
+import { Button, Column, Input, Title, Text } from 'components'
 import { useUserContext } from 'contexts'
 
+const schema = yup.object().shape({
+  email: yup.string().required('Por favor, preencha seu e-mail').nullable(),
+  password: yup.string().required('Por favor, preencha sua senha').nullable(),
+})
+
 export const LoginPage: React.FC = () => {
-  const { register, handleSubmit } = useForm()
+  const { errors, register, handleSubmit } = useForm({ resolver: yupResolver(schema) })
   const { setUser } = useUserContext()
 
   const onSubmit = useCallback(
@@ -20,15 +27,13 @@ export const LoginPage: React.FC = () => {
     <Column bg="white">
       <form onSubmit={handleSubmit(onSubmit)}>
         <Title>Painel de Autenticação</Title>
-        <Input type="email" id="email" name="email" placeholder="E-mail" ref={register({ required: true })} />
-        <Input
-          type="password"
-          id="password"
-          name="password"
-          placeholder="Senha"
-          mt="10px"
-          ref={register({ required: true })}
-        />
+
+        <Input type="email" id="email" name="email" placeholder="E-mail" ref={register} />
+        {errors?.email?.message && <Text color="red">{errors?.email?.message}</Text>}
+
+        <Input type="password" id="password" name="password" placeholder="Senha" mt="10px" ref={register} />
+        {errors?.password?.message && <Text color="red">{errors?.password?.message}</Text>}
+
         <Button type="submit" width="100%" my="10px">
           Conectar
         </Button>

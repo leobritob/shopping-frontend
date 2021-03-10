@@ -1,6 +1,7 @@
 import React from 'react'
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
 
+import { AppContext } from 'contexts'
 import { Router } from './routes'
 import { theme, ThemeType } from 'styles'
 
@@ -16,9 +17,11 @@ const GlobalStyles = createGlobalStyle<{ theme: ThemeType }>`
 
 export const App: React.FC = () => {
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyles theme={theme} />
-      <Router />
-    </ThemeProvider>
+    <AppContext>
+      <ThemeProvider theme={theme}>
+        <GlobalStyles theme={theme} />
+        <Router />
+      </ThemeProvider>
+    </AppContext>
   )
 }

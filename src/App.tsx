@@ -13,6 +13,10 @@ const GlobalStyles = createGlobalStyle<{ theme: ThemeType }>`
     box-sizing: border-box;
     font-family: Nunito, sans-serif;
   }
+  
+  a {
+    color:#000;
+  }
 `
 
 export const App: React.FC = () => {

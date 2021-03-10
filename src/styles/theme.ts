@@ -23,6 +23,7 @@ export const theme = {
     primary,
     primaryLighten: color(primary).lighten(0.5).hex(),
     primaryDarken: color(primary).darken(0.5).hex(),
+    danger: '#900',
   },
   radii: {
     borderRadius: 4,

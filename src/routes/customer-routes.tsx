@@ -6,9 +6,7 @@ import { CustomerHomePage } from 'pages/customer'
 export const CustomerRoutes: React.FC = () => {
   return (
     <Fragment>
-      <Route path="/home" exact>
-        <CustomerHomePage />
-      </Route>
+      <Route path="/home" exact component={CustomerHomePage} />
 
       <Redirect path="*" to="/home" />
     </Fragment>

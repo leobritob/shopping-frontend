@@ -2,6 +2,7 @@ import React, { useCallback } from 'react'
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
+import { useHistory } from 'react-router'
 
 import { Button, Column, Input, Title, Text } from 'components'
 import { useUserContext } from 'contexts'
@@ -14,13 +15,14 @@ const schema = yup.object().shape({
 export const LoginPage: React.FC = () => {
   const { errors, register, handleSubmit } = useForm({ resolver: yupResolver(schema) })
   const { setUser } = useUserContext()
+  const history = useHistory()
 
   const onSubmit = useCallback(
     (value) => {
-      console.log(value)
       setUser(value)
+      history.push('/dashboard')
     },
-    [setUser]
+    [setUser, history]
   )
 
   return (

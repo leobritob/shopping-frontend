@@ -8,9 +8,7 @@ export const UnauthorizedRoutes: React.FC = () => {
   return (
     <Fragment>
       <LoginLayout>
-        <Route path="/login" exact>
-          <LoginPage />
-        </Route>
+        <Route path="/login" exact component={LoginPage} />
       </LoginLayout>
 
       <Redirect path="*" to="/login" />

@@ -15,7 +15,7 @@ import {
 type ButtonProps = ColorProps & LayoutProps & ShadowProps & PaddingProps & SpaceProps
 
 export const Button = styled.button.attrs({ 'data-testid': 'button' })<ButtonProps>`
-  background-color: #069;
+  background-color: ${({ theme }) => theme.colors.primary};
   border: none;
   color: #fff;
   cursor: pointer;

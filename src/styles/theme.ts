@@ -14,15 +14,15 @@ fontSizes.big = fontSizes[3]
 fontSizes.bigger = fontSizes[4]
 fontSizes.biggest = fontSizes[5]
 
-const primary = '#069'
+const primary = '#803ae0'
 
 export const theme = {
   breakpoints,
   fontSizes,
   colors: {
     primary,
-    primaryLighten: color(primary).lighten(0.5).hex(),
-    primaryDarken: color(primary).darken(0.5).hex(),
+    primaryLighten: color(primary).lighten(0.1).hex(),
+    primaryDarken: color(primary).darken(0.1).hex(),
     danger: '#900',
   },
   radii: {

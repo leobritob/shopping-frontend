@@ -5,7 +5,7 @@ import { StorageHelper } from '../helpers/storage.helper'
 
 type UserContextProps = {
   user: IUser | undefined
-  setUser: (user: IUser) => void
+  setUser: (user: IUser | undefined) => void
 }
 
 const Context = createContext<UserContextProps>({ user: undefined, setUser: () => {} })

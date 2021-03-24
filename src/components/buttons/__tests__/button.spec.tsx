@@ -43,14 +43,14 @@ describe('<Button />', () => {
     })
 
     expect(pretty(container.innerHTML)).toMatchInlineSnapshot(
-      `"<button data-testid=\\"button\\" class=\\"sc-bdfBwQ lDFgM\\">Ok</button>"`
+      `"<button data-testid=\\"button\\" class=\\"sc-bdfBwQ WxCYr\\">Ok</button>"`
     )
   })
 
   it('should have a default style', () => {
     const button = renderer.create(<Button theme={theme} />).toJSON()
     expect(button).toHaveStyleRule('padding', '10px 20px')
-    expect(button).toHaveStyleRule('background-color', '#069')
+    expect(button).toHaveStyleRule('background-color', theme.colors.primary)
     expect(button).toHaveStyleRule('border', 'none')
     expect(button).toHaveStyleRule('color', '#fff')
     expect(button).toHaveStyleRule('cursor', 'pointer')
@@ -62,7 +62,7 @@ describe('<Button />', () => {
     const button = renderer.create(<Button theme={theme} padding="20px 40px" />).toJSON()
     expect(button).not.toHaveStyleRule('padding', '10px 20px')
     expect(button).toHaveStyleRule('padding', '20px 40px')
-    expect(button).toHaveStyleRule('background-color', '#069')
+    expect(button).toHaveStyleRule('background-color', theme.colors.primary)
     expect(button).toHaveStyleRule('border', 'none')
     expect(button).toHaveStyleRule('color', '#fff')
     expect(button).toHaveStyleRule('cursor', 'pointer')
